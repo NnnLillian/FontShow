@@ -1,0 +1,23 @@
+
+@import './fontStore';
+
+// 使用for循环实现
+/* 
+    @for $i from 1 through length($stars) {
+        $item: nth($stars, $i);
+        @font-face {
+            font-family: map-get($item, font-name);
+            src: map-get($item, font-url);
+        }
+    }
+
+ */
+
+ 
+// 使用each循环实现
+@each $item in $stars {
+    @font-face {
+        font-family: map-get($item, font-name);
+        src: map-get($item, font-url);
+    }
+}
