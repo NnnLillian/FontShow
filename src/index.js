@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Spin } from 'antd';
 
 document.onreadystatechange = subSomething;//当页面加载状态改变的时候执行这个方法. 
 function subSomething() {
@@ -14,7 +15,12 @@ function subSomething() {
       document.getElementById('root')
     );
   } else {
-    document.getElementById('root').innerHTML = '<h1>LOADING……</h1>'
+    ReactDOM.render(
+      <div className="spin">
+        <Spin />
+      </div>,
+      document.getElementById('root')
+    );
   }
 }
 

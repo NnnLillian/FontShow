@@ -1,4 +1,4 @@
-import { Card, List, Row, Col, Input, Divider, BackTop } from 'antd';
+import { Card, List, Row, Col, Input, Divider, BackTop, Spin } from 'antd';
 import React, { Component } from 'react';
 import './fontStyles/fontFace.scss'
 import './App.css';
@@ -37,7 +37,7 @@ class App extends Component {
   onSearch = (text) => {
     const result = this.state.data.filter((item) => {
       return item.name.indexOf(text) !== -1
-    })
+    }) 
 
     console.log(result)
 
@@ -85,7 +85,7 @@ class App extends Component {
                   )
                 }
               ></List>
-            </div>
+            </div> 
           </Col>
         </Row>
       </div>

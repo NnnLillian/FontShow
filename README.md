@@ -22,7 +22,15 @@
 
 ### 问题
 
-1. 如何实现资源加载前的Loading？
+1. 如何实现资源加载前的Loading？ 
+> DOM加载完毕事件
+> ```
+> if (document.readyState === 'complete') {
+>  // 页面已完全加载 在这里隐藏 loading
+> }
+> ```
+> 参考链接：https://www.jstips.co/zh_cn/javascript/detect-document-ready-in-pure-js/
+
 
 2. 如何在react中直接调用toolScript文件功能？
 
